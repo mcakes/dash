@@ -2117,7 +2117,7 @@ class Dash:
             self.clientside_callback(
                 """
                 function(data) {{
-                    document.title = data.title
+                    if (data) document.title = data.title
                 }}
                 """,
                 Output(_ID_DUMMY, "children"),
